@@ -1,27 +1,12 @@
-@font-face {
-    font-family: "Arial";
-    src: url("../assets/fonts/arial/arial-regular.ttf") format("truetype"),
-      url("../assets/fonts/arial/arial-regular.woff2") format('woff2'), 
-         url("../assets/fonts/arial/arial-regular.woff") format('woff');
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-@font-face {
-    font-family: "Georgia";
-    src: url("../assets/fonts/georgia/georgia-regular.ttf") format("truetype"),
-      url("../assets/fonts/georgia/georgia-regular.woff2") format('woff2'), 
-         url("../assets/fonts/georgia/georgia-regular.woff") format('woff');
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
+@import "abstract/constants";
+@import "base/base";
 
-html {
-    font-size: 10px;
-}
+//Layouts
+@import "layouts/wrapper";
+@import "layouts/header";
+@import "layouts/footer";
 
-body {
-    font-size: 1.5rem;
-    font-family: 'Arial', sans-serif;
-}
+//Components
+@import "component/pets";
+@import "component/donation";
+@import "component/start";
