@@ -1,3 +1,37 @@
 .wrapper {
     max-width: $content-width;
+    margin: auto;
+    
 }
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.start__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+.navigation {
+    display: flex;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-text-lite;
+}
+.navigation__link {
+    list-style: none;
+    padding-left: 35px;
+    cursor: pointer;
+}
+.navigation__link:first-child {
+    padding-left: 0;
+}
+.navigation__link:hover {
+    color: $color-link-hover-lite;
+}
+.navigation__link:activ {
+    color: $color-text-lite;
+    border-bottom: 3px, solid, $color-primari;
+} 

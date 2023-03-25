@@ -9,31 +9,45 @@
     <title>Shelter task</title>
 </head>
 <body>
+    <section class="start-background">
     <header class="header">
-        <div class="wrapper">
-            <h1>Cozy House</h1>
-            <p class="logo-subtitle">Shelter for pets in Boston</p>
+        <div class="wrapper header__wrapper">
+            <div class="logo">
+                <a href="#!" class="logo__link">
+                    <h1>Cozy House</h1>
+                    <p class="logo-subtitle">Shelter for pets in Boston</p>
+                </a>
+                </div>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li>About the shelter</li>
-                    <li>Our pets</li>
-                    <li>Help the shelter</li>
-                    <li>Contacts</li>
+                    <li class="navigation__link header__link_activ">
+                        About the shelter
+                    </li>
+                    <li class="navigation__link">
+                        <a href="#!" class="header__link">Our pets</a>
+                    </li>
+                    <li class="navigation__link">
+                        <a href="#help" class="header__link"> Help the shelter</a>
+                    </li>
+                    <li class="navigation__link">
+                        <a href="#!" class="header__link">Contacts</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
     <section class="start">
-        <div class="wrapper">
+        <div class="wrapper start__wrapper">
             <div class="start__content">
-                <h2>Not only people need a house</h2>
-                <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                <h2 class="start__title">Not only people need a house</h2>
+                <p class="start__text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                 <div class="start__button">
                     <button class="button button_colored">Make a friend</button>
                 </div>
             </div>
-            <img class="start__image">
+            <img src="./assets/img/start-screen-puppy.png" class="start__image" alt="Puppy image">
         </div>
+    </section>
     </section>
     <section class="about">
         <div class="wrapper">
@@ -65,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section class="help">
+    <section class="help" id="help">
         <div class="wrapper">
             <h3>How you can help
                 our shelter</h3>

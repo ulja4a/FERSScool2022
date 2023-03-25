@@ -1,5 +1,11 @@
+//Abstract
+@import "../node_modules/normalize.css/normalize.css";
 @import "abstract/constants";
+@import "abstract/placeholders";
+
+//Base
 @import "base/base";
+@import "base/buttons";
 
 //Layouts
 @import "layouts/wrapper";
@@ -10,3 +16,4 @@
 @import "component/pets";
 @import "component/donation";
 @import "component/start";
+@import "component/navigation";

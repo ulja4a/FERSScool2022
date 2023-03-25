@@ -1,0 +1,19 @@
+.header__link {
+    text-decoration: none;
+    color: #CDCDCD;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.header__link:hover {
+    color: $color-link-hover-lite;
+}
+.header__link_activ {
+    color: $color-link-hover-lite;
+    border-bottom: 3px solid $color-primari;
+} 
+.header__link:first-child {
+    padding-left: 0;
+}
+.logo__link {
+    text-decoration: none;
+}
