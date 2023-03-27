@@ -84,6 +84,7 @@ h5 {
 }
 
 .button_bordered {
+  background: #FAFAFA;
   color: #292929;
 }
 
@@ -93,6 +94,10 @@ h5 {
 }
 
 .button_colored:hover {
+  background: #FDDCC4;
+}
+
+.button_bordered:hover {
   background: #FDDCC4;
 }
 
@@ -112,6 +117,22 @@ h5 {
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0 100px;
+}
+
+.pets__wrapper {
+  padding: 65px 0 100px 0;
+  text-align: center;
+}
+
+.help__wrapper {
+  text-align: center;
+  margin-top: 80px;
 }
 
 .navigation {
@@ -159,6 +180,17 @@ footer {
 
 .pets {
   background: #F6F6F6;
+}
+
+.pets__title {
+  margin: 0 400px;
+  align-items: center;
+  text-align: center;
+  color: #545454;
+}
+
+.text {
+  margin: 0;
 }
 
 .donation {
@@ -213,6 +245,209 @@ footer {
 
 .logo__link {
   text-decoration: none;
+}
+
+.slider-icon-prev {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  background: url(../assets/img/button_arrow.png) no-repeat;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.slider-icon-prev:hover {
+  background: url(../assets/img/button_arrow_colored.png) no-repeat;
+  transition: all 0.3s ease-out;
+}
+
+.slider-icon-next {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  background: url(../assets/img/button_arrow.png) no-repeat;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.slider-icon-next:hover {
+  background: url(../assets/img/button_arrow_colored.png) no-repeat;
+  transition: all 0.3s ease-out;
+  transform: rotate(180deg);
+}
+
+.slide-icon {
+  display: flex;
+  align-items: center;
+}
+
+img.about__image {
+  margin: 0 120px 0 215px;
+}
+
+.about__content {
+  margin: 10px 135px 14px 0;
+}
+
+.about__title {
+  margin: 0;
+  padding: 0 60px 0 0;
+}
+
+.about__text {
+  margin-top: 25px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+
+.name-pet {
+  padding-top: 30px;
+  margin-top: 0;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.card-pet {
+  background: #FAFAFA;
+  font-size: 20px;
+  line-height: 23px;
+  color: #545454;
+  cursor: pointer;
+}
+
+.card-pet:hover > .card__content {
+  background: #FFFFFF;
+}
+
+.card-content:hover > .button_bordered {
+  background: #FDDCC4;
+}
+
+.slider-button {
+  padding-bottom: 30px;
+}
+
+.pet1 {
+  background-image: url(././assets/img/katrine.png);
+}
+
+.help__title {
+  margin: 0 0 60px 0;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.help__text {
+  margin: 0;
+}
+
+.help__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px 120px;
+  margin-bottom: 100px;
+}
+
+.icon-square_food {
+  background-image: url(../assets/svg/icon-pet-food.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.help-list__icon {
+  display: flex;
+}
+
+.icon__title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.icon-square_transportation {
+  background-image: url(../assets/svg/icon-transportation.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_toys {
+  background-image: url(../assets/svg/icon-toys.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_bowls {
+  background-image: url(../assets/svg/icon-bowls-and-cups.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_shampoos {
+  background-image: url(../assets/svg/icon-shampoos.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_vitamins {
+  background-image: url(../assets/svg/icon-vitamins.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_medicines {
+  background-image: url(../assets/svg/icon-medicines.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_collars {
+  background-image: url(../assets/svg/icon-collars-leashes.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.icon-square_sleeping {
+  background-image: url(../assets/svg/icon-sleeping-area.svg);
+  width: 60px;
+  height: 60px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

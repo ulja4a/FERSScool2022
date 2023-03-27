@@ -13,6 +13,7 @@
     transition: all .3s ease-out;
 }
 .button_bordered {
+    background: $color-link-hover-lite;
     color: $color-link-hover-dark;
 }
 .button_colored {
@@ -20,5 +21,8 @@
     color: $color-link-hover-dark;
 }
 .button_colored:hover {
+    background: $color-button-hover-colored;
+}
+.button_bordered:hover {
     background: $color-button-hover-colored;
 }
