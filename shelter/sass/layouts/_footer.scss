@@ -48,6 +48,9 @@ footer {
     height: 32px;
     
 }
+.icon_location:hover {
+    color: $color-button-hover-colored;
+}
 .icon-letter {
     cursor: pointer;
     display: inline-block;
@@ -55,11 +58,17 @@ footer {
     width: 40px;
     height: 26px;
 }
+.icon-letter:hover {
+    color: $color-button-hover-colored;
+}
 .icon-phone {
     cursor: pointer;
     background-image: url(../assets/svg/phone.svg);
     width: 40px;
     height: 32px;
+}
+.icon-phone:hover {
+    color: $color-button-hover-colored;
 }
 .link_footer {
     text-decoration: none;
@@ -74,7 +83,9 @@ footer {
     color: #F1CDB3;
     padding-left: 20px;
 }
-
+.link_footer:hover {
+    color: $color-button-hover-colored;
+}
 .contacts_link {
     display: inline-flex;
     align-items: center;

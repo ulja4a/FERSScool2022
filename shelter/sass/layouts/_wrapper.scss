@@ -12,12 +12,12 @@
 .start__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 90px;
+    margin-top: 55px;
 }
 .about__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 80px 0 100px;
+    margin: 70px 0 100px;
 }
 .pets__wrapper {
     padding: 65px 0 100px 0;
@@ -49,12 +49,28 @@
 }
 .navigation__link {
     list-style: none;
-    padding-left: 35px;
+    margin-left: 35px;
     cursor: pointer;
+    transition: all .3s ease-out;
+    scroll-behavior: smooth;
+}
+.navigation__link-lite {
+    list-style: none;
+    margin-left: 35px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    scroll-behavior: smooth;
 }
 .navigation__link:first-child {
     padding-left: 0;
 }
 .navigation__link:hover {
     color: $color-link-hover-lite;
+    transition: all .3s ease-out;
+    scroll-behavior: smooth;
+}
+.navigation__link-lite:hover {
+    color: $color-link-hover-dark;
+    transition: all .3s ease-out;
+    scroll-behavior: smooth;
 }
