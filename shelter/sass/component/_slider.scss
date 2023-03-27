@@ -1,0 +1,39 @@
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+
+.name-pet {
+    padding-top: 30px;
+    margin-top: 0;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+.card-pet {
+    
+    background: $color-link-hover-lite;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-heading-dark;
+    cursor: pointer;
+}
+.card-pet:hover > .card__content {
+    background: $color-heading-lite;
+    
+}
+.card-content:hover > .button_bordered {
+    background: $color-button-hover-colored;
+}
+.slider-button {
+    padding-bottom: 30px;
+}
+.pet1 {
+    background-image: url(././assets/img/katrine.png);
+}

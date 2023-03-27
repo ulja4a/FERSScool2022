@@ -1,0 +1,53 @@
+.header__link {
+    text-decoration: none;
+    color: #CDCDCD;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.header__link:hover {
+    color: $color-link-hover-lite;
+}
+.header__link_activ {
+    color: $color-link-hover-lite;
+    border-bottom: 3px solid $color-primari;
+} 
+.header__link:first-child {
+    padding-left: 0;
+}
+.logo__link {
+    text-decoration: none;
+}
+.slider-icon-prev {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    background: url(../assets/img/button_arrow.png) no-repeat;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.slider-icon-prev:hover {
+    background: url(../assets/img/button_arrow_colored.png) no-repeat;
+    transition: all .3s ease-out;
+}
+.slider-icon-next {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    background: url(../assets/img/button_arrow.png) no-repeat;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+.slider-icon-next:hover {
+    background: url(../assets/img/button_arrow_colored.png) no-repeat;
+    transition: all .3s ease-out;
+    transform: rotate(180deg);
+}
+.slide-icon {
+    display: flex;
+    align-items: center;
+}
