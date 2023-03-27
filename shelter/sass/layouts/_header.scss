@@ -1,5 +1,5 @@
 header {
-    padding-top: 30px;
+    padding: 30px 0;
     
 }
 .logo-subtitle {
@@ -8,4 +8,11 @@ header {
     letter-spacing: 0.1em;
     margin: 10px 0 0 0;
     color: $color-heading-lite;
+}
+.logo-subtitle-lite {
+    font-size: 1.3rem;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    margin: 10px 0 0 0;
+    color: $color-link-hover-dark;
 }

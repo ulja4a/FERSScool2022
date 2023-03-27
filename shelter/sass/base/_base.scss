@@ -19,6 +19,7 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,15 @@ h1 {
     letter-spacing: 0.06em;
     color: $color-primari;
     margin: 0;
+}
+.h1-lite {
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-heading-dark;
 }
 h2 {
     font-family: 'Georgia', sans-serif;

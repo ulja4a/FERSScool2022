@@ -15,6 +15,7 @@
 }
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,6 +32,16 @@ h1 {
   letter-spacing: 0.06em;
   color: #F1CDB3;
   margin: 0;
+}
+
+.h1-lite {
+  font-family: "Georgia", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 h2 {
@@ -116,13 +127,13 @@ h5 {
 .start__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 90px;
+  margin-top: 55px;
 }
 
 .about__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0 100px;
+  margin: 70px 0 100px;
 }
 
 .pets__wrapper {
@@ -160,8 +171,18 @@ h5 {
 
 .navigation__link {
   list-style: none;
-  padding-left: 35px;
+  margin-left: 35px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+  scroll-behavior: smooth;
+}
+
+.navigation__link-lite {
+  list-style: none;
+  margin-left: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  scroll-behavior: smooth;
 }
 
 .navigation__link:first-child {
@@ -170,10 +191,18 @@ h5 {
 
 .navigation__link:hover {
   color: #FAFAFA;
+  transition: all 0.3s ease-out;
+  scroll-behavior: smooth;
+}
+
+.navigation__link-lite:hover {
+  color: #292929;
+  transition: all 0.3s ease-out;
+  scroll-behavior: smooth;
 }
 
 header {
-  padding-top: 30px;
+  padding: 30px 0;
 }
 
 .logo-subtitle {
@@ -182,6 +211,14 @@ header {
   letter-spacing: 0.1em;
   margin: 10px 0 0 0;
   color: #FFFFFF;
+}
+
+.logo-subtitle-lite {
+  font-size: 1.3rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  margin: 10px 0 0 0;
+  color: #292929;
 }
 
 footer {
@@ -236,6 +273,10 @@ footer {
   height: 32px;
 }
 
+.icon_location:hover {
+  color: #FDDCC4;
+}
+
 .icon-letter {
   cursor: pointer;
   display: inline-block;
@@ -244,11 +285,19 @@ footer {
   height: 26px;
 }
 
+.icon-letter:hover {
+  color: #FDDCC4;
+}
+
 .icon-phone {
   cursor: pointer;
   background-image: url(../assets/svg/phone.svg);
   width: 40px;
   height: 32px;
+}
+
+.icon-phone:hover {
+  color: #FDDCC4;
 }
 
 .link_footer {
@@ -263,6 +312,10 @@ footer {
   letter-spacing: 0.06em;
   color: #F1CDB3;
   padding-left: 20px;
+}
+
+.link_footer:hover {
+  color: #FDDCC4;
 }
 
 .contacts_link {
@@ -283,6 +336,14 @@ footer {
 
 .text {
   margin: 0;
+}
+
+.card_contener {
+  margin: 45px 0 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 40px;
 }
 
 .donation {
@@ -339,6 +400,10 @@ footer {
   color: #545454;
 }
 
+.link-button:hover {
+  background: #FDDCC4;
+}
+
 .icon-card {
   cursor: pointer;
   display: inline-block;
@@ -379,14 +444,32 @@ footer {
   color: #CDCDCD;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  scroll-behavior: smooth;
+}
+
+.header__link-lite {
+  text-decoration: none;
+  color: #545454;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  scroll-behavior: smooth;
 }
 
 .header__link:hover {
   color: #FAFAFA;
 }
 
+.header__link-lite:hover {
+  color: #292929;
+}
+
 .header__link_activ {
   color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.header__link-lite_activ {
+  color: #545454;
   border-bottom: 3px solid #F1CDB3;
 }
 
@@ -442,7 +525,7 @@ img.about__image {
 }
 
 .about__content {
-  margin: 10px 135px 14px 0;
+  margin: 25px 135px 14px 0;
 }
 
 .about__title {

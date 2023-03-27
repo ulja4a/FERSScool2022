@@ -3,17 +3,33 @@
     color: #CDCDCD;
     cursor: pointer;
     transition: all .3s ease-out;
+    scroll-behavior: smooth;
+}
+.header__link-lite {
+    text-decoration: none;
+    color: #545454;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    scroll-behavior: smooth;
 }
 .header__link:hover {
     color: $color-link-hover-lite;
+}
+.header__link-lite:hover {
+    color: $color-link-hover-dark;
 }
 .header__link_activ {
     color: $color-link-hover-lite;
     border-bottom: 3px solid $color-primari;
 } 
+.header__link-lite_activ {
+    color: #545454;
+    border-bottom: 3px solid $color-primari;
+} 
 .header__link:first-child {
     padding-left: 0;
 }
+
 .logo__link {
     text-decoration: none;
 }

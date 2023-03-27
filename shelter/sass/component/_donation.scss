@@ -47,6 +47,9 @@
     letter-spacing: 0.06em;
     color: #545454;
 }
+.link-button:hover {
+    background: $color-button-hover-colored;
+}
 .icon-card {
     cursor: pointer;
     display: inline-block;
