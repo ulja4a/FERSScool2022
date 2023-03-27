@@ -1,6 +1,81 @@
 footer {
-    background: url(noise_lines_transparent@2X.png), 
+    background: url(noise_lines_../assets/img/noise_transparent@2x.png), 
     radial-gradient(110.67% 538.64% at 5.73% 50%,
      #513D2F 0%, #1A1A1C 100%), #211F20;
      background-size: cover;
+}
+
+.footer__title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+.footer__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    width: 288px;
+}
+.footer__location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 302px
+}
+.icon-place {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding-right: 10px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+.icon_location {
+    cursor: pointer;
+    display: inline-block;
+    background-image: url(../assets/svg/pin.svg);
+    width: 22px;
+    height: 32px;
+    
+}
+.icon-letter {
+    cursor: pointer;
+    display: inline-block;
+    background-image: url(../assets/svg/mail.svg);
+    width: 40px;
+    height: 26px;
+}
+.icon-phone {
+    cursor: pointer;
+    background-image: url(../assets/svg/phone.svg);
+    width: 40px;
+    height: 32px;
+}
+.link_footer {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    padding-left: 20px;
+}
+
+.contacts_link {
+    display: inline-flex;
+    align-items: center;
 }

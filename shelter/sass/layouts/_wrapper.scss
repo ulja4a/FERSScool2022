@@ -27,6 +27,20 @@
     text-align: center;
     margin-top: 80px;
 }
+.donation__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 80px 183px 100px 183px;
+}
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    flex-wrap: nowrap;
+    align-items: center;
+    grid-gap: 160px;
+}
 .navigation {
     display: flex;
     font-size: 15px;
@@ -44,7 +58,3 @@
 .navigation__link:hover {
     color: $color-link-hover-lite;
 }
-.navigation__link:activ {
-    color: $color-text-lite;
-    border-bottom: 3px, solid, $color-primari;
-} 
