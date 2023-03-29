@@ -35,11 +35,9 @@
 }
 .footer__wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 20px;
-    flex-wrap: nowrap;
-    align-items: center;
-    grid-gap: 160px;
+    width: 100%;
 }
 .navigation {
     display: flex;

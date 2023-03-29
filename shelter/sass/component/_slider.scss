@@ -24,13 +24,16 @@
     color: $color-heading-dark;
     cursor: pointer;
 }
-.card-pet:hover > .card__content {
+.card-pet:hover > .card__content  {
     background: $color-heading-lite;
+    transition: 1s;
     
+    button {
+        transition: 1s;
+        background: $color-button-hover-colored;
+    }
 }
-.card-content:hover > .button_bordered {
-    background: $color-button-hover-colored;
-}
+
 .slider-button {
     padding-bottom: 30px;
 }

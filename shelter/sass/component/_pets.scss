@@ -10,3 +10,9 @@
 .text {
     margin: 0;
 }
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 28.3%;
+}
