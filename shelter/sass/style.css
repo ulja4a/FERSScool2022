@@ -155,11 +155,9 @@ h5 {
 
 .footer__wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 20px;
-  flex-wrap: nowrap;
-  align-items: center;
-  grid-gap: 160px;
+  width: 100%;
 }
 
 .navigation {
@@ -224,6 +222,10 @@ header {
 footer {
   background: url(noise_lines_../assets/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .footer__title {
@@ -238,17 +240,17 @@ footer {
 
 .footer__contacts {
   display: flex;
-  flex-wrap: wrap;
-  align-self: flex-start;
-  width: 288px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23.2%;
 }
 
-.footer__location {
+.footer__locations {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 302px;
+  width: 25.17%;
 }
 
 .icon-place {
@@ -301,9 +303,10 @@ footer {
 }
 
 .link_footer {
-  text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  text-decoration: none;
+  gap: 20px;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -311,7 +314,6 @@ footer {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #F1CDB3;
-  padding-left: 20px;
 }
 
 .link_footer:hover {
@@ -336,6 +338,13 @@ footer {
 
 .text {
   margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 28.3%;
 }
 
 .card_contener {
@@ -520,6 +529,33 @@ footer {
   align-items: center;
 }
 
+.pagination_button {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgb(241, 205, 179);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.unactived {
+  border: 2px solid #CDCDCD;
+  cursor: default;
+}
+
+.actived {
+  background: #F1CDB3;
+}
+
+.actived_right:hover {
+  background: #FDDCC4;
+  border: 2px solid rgba(241, 205, 179, 0);
+  transition: 0.4s;
+}
+
 img.about__image {
   margin: 0 120px 0 215px;
 }
@@ -570,9 +606,10 @@ img.about__image {
 
 .card-pet:hover > .card__content {
   background: #FFFFFF;
+  transition: 1s;
 }
-
-.card-content:hover > .button_bordered {
+.card-pet:hover > .card__content button {
+  transition: 1s;
   background: #FDDCC4;
 }
 

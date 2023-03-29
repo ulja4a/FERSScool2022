@@ -67,3 +67,26 @@
     display: flex;
     align-items: center;
 }
+.pagination_button {
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgb(241, 205, 179, 1);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.unactived {
+    border: 2px solid #CDCDCD;
+    cursor: default;
+}
+.actived {
+    background: #F1CDB3;
+}
+.actived_right:hover {
+    background: #FDDCC4;
+    border: 2px solid rgb(241, 205, 179, 0);
+    transition: 0.4s;
+}
