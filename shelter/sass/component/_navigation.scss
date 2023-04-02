@@ -2,14 +2,15 @@
     text-decoration: none;
     color: #CDCDCD;
     cursor: pointer;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
+    letter-spacing: normal;
 }
 .header__link-lite {
     text-decoration: none;
     color: #545454;
     cursor: pointer;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
 }
 .header__link:hover {

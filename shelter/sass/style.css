@@ -1,4 +1,16 @@
 @import "../node_modules/normalize.css/normalize.css";
+.header__link-lite, .header__link, .navigation__link-lite:hover, .navigation__link:hover, .navigation__link-lite, .navigation__link {
+  transition: all 0.3s ease-out;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+h5, h4, h3, h2, .h1-lite, h1 {
+  font-family: "Georgia", sans-serif;
+}
+
 @font-face {
   font-family: "Arial";
   src: url("../assets/fonts/arial/arial-regular.ttf") format("truetype"), url("../assets/fonts/arial/arial-regular.woff2") format("woff2"), url("../assets/fonts/arial/arial-regular.woff") format("woff");
@@ -20,63 +32,66 @@ html {
 
 body {
   font-size: 1.5rem;
-  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.4rem;
 }
 
 h1 {
-  font-family: "Georgia", sans-serif;
+  font-size: 3.2rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 110%;
+  line-height: 3.5rem;
   letter-spacing: 0.06em;
   color: #F1CDB3;
   margin: 0;
 }
 
 .h1-lite {
-  font-family: "Georgia", sans-serif;
+  font-size: 3.2rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 110%;
+  line-height: 3.5rem;
   letter-spacing: 0.06em;
   color: #545454;
 }
 
 h2 {
-  font-family: "Georgia", sans-serif;
+  font-size: 4.4rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 44px;
-  line-height: 130%;
+  line-height: 5.7rem;
+}
+@media (max-width: 414px) {
+  h2 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem;
+    letter-spacing: 0.06em;
+  }
 }
 
 h3 {
-  font-family: "Georgia", sans-serif;
+  font-size: 3.5rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
-  line-height: 130%;
+  line-height: 4.5rem;
   letter-spacing: 0.06em;
 }
 
 h4 {
-  font-family: "Georgia", sans-serif;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 115%;
-  letter-spacing: 0.06em;
+  line-height: 2.3rem;
 }
 
 h5 {
-  font-family: "Georgia", sans-serif;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 110%;
-  letter-spacing: 0.06em;
+  line-height: 1.7rem;
 }
 
 .button {
@@ -86,7 +101,7 @@ h5 {
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  padding: 15px 45px;
+  padding: 13px 43px;
   border-radius: 100px;
   border: 2px solid #F1CDB3;
   gap: 10px;
@@ -112,9 +127,58 @@ h5 {
   background: #FDDCC4;
 }
 
+.hamburger__line, .hamburger::after, .hamburger:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #F1CDB3;
+  background: #F1CDB3;
+  height: 0px;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+}
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+}
+.hamburger:before {
+  top: 0;
+  left: 0;
+}
+.hamburger::after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line {
+  top: calc(50% - 1px);
+}
+
 .wrapper {
   max-width: 1200px;
   margin: auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media (max-width: 414px) {
+  .wrapper {
+    max-width: 414px;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+  }
 }
 
 .header__wrapper {
@@ -123,18 +187,50 @@ h5 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .header__wrapper {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 414px) {
+  .header__wrapper {
+    padding: 0 20px;
+  }
+}
 
 .start__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 55px;
+  margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .start__wrapper {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    padding: 0 100px 0 99px;
+  }
+}
+@media (max-width: 414px) {
+  .start__wrapper {
+    padding: 0 10px;
+  }
 }
 
 .about__wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
-  padding-bottom: 100px;
+  padding: 80px 0 100px 0;
+}
+@media (max-width: 768px) {
+  .about__wrapper {
+    flex-wrap: wrap-reverse;
+    padding: 80px 166px 100px 165px;
+  }
+}
+@media (max-width: 414px) {
+  .about__wrapper {
+    padding: 42px 10px;
+  }
 }
 
 .pets__wrapper {
@@ -166,57 +262,60 @@ h5 {
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
+  padding-left: 0;
+}
+@media (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
 }
 
 .navigation__link {
   list-style: none;
   margin-left: 35px;
   cursor: pointer;
-  transition: all 0.3s ease-out;
   scroll-behavior: smooth;
+  letter-spacing: normal;
 }
 
 .navigation__link-lite {
   list-style: none;
   margin-left: 35px;
   cursor: pointer;
-  transition: all 0.3s ease-out;
   scroll-behavior: smooth;
 }
 
 .navigation__link:first-child {
-  padding-left: 0;
+  margin-left: 0;
 }
 
 .navigation__link:hover {
   color: #FAFAFA;
-  transition: all 0.3s ease-out;
   scroll-behavior: smooth;
 }
 
 .navigation__link-lite:hover {
   color: #292929;
-  transition: all 0.3s ease-out;
   scroll-behavior: smooth;
 }
 
 header {
-  padding: 30px 0;
+  padding: 30px 0 0 0;
 }
 
 .logo-subtitle {
   font-size: 1.3rem;
-  line-height: 15px;
+  line-height: 1.5rem;
   letter-spacing: 0.1em;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 5px;
   color: #FFFFFF;
 }
 
 .logo-subtitle-lite {
   font-size: 1.3rem;
-  line-height: 15px;
+  line-height: 1.5rem;
   letter-spacing: 0.1em;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 5px;
   color: #292929;
 }
 
@@ -429,39 +528,76 @@ footer {
 }
 
 .start__content {
-  margin: 163px 42px 243px 0;
+  margin-top: 163px;
+}
+@media (max-width: 768px) {
+  .start__content {
+    margin: 0;
+    padding: 0 54px 100px 55px;
+  }
+}
+@media (max-width: 414px) {
+  .start__content {
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .start__title {
   margin: 0 150px 0 0;
-  font-family: "Georgia";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 130%;
+  width: 67.4%;
   color: #FFFFFF;
+}
+@media (max-width: 414px) {
+  .start__title {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .start__text {
-  margin: 42px 0;
-  font-size: 15px;
-  line-height: 160%;
+  margin: 0;
+  padding: 42px 0px;
   color: #CDCDCD;
+}
+
+.start__image {
+  margin-left: 42px;
+}
+@media (max-width: 768px) {
+  .start__image {
+    margin-left: 70px;
+    background-size: contain;
+    width: 569px;
+    height: 593px;
+  }
+}
+@media (max-width: 414px) {
+  .start__image {
+    margin: 105px 0 0 40px;
+    width: 260px;
+    height: 271px;
+  }
+}
+
+@media (max-width: 768px) {
+  .start__button {
+    text-align: center;
+  }
 }
 
 .header__link {
   text-decoration: none;
   color: #CDCDCD;
   cursor: pointer;
-  transition: all 0.3s ease-out;
   scroll-behavior: smooth;
+  letter-spacing: normal;
 }
 
 .header__link-lite {
   text-decoration: none;
   color: #545454;
   cursor: pointer;
-  transition: all 0.3s ease-out;
   scroll-behavior: smooth;
 }
 
@@ -558,24 +694,69 @@ footer {
 }
 
 img.about__image {
-  margin: 0 120px 0 215px;
+  padding: 0 0 0 175px;
+  width: 300px;
+  height: 408px;
+}
+@media (max-width: 768px) {
+  img.about__image {
+    padding: 80px 68px 0 69px;
+  }
+}
+@media (max-width: 414px) {
+  img.about__image {
+    padding: 20px 20px 0.4px;
+    width: 260px;
+    height: 353.6px;
+  }
 }
 
 .about__content {
-  margin: 25px 135px 14px 0;
+  padding: 14px 175px 14px 120px;
+}
+@media (max-width: 768px) {
+  .about__content {
+    padding: 0;
+  }
+}
+@media (max-width: 414px) {
+  .about__content {
+    text-align: center;
+  }
 }
 
 .about__title {
   margin: 0;
   padding: 0 60px 0 0;
 }
+@media (max-width: 414px) {
+  .about__title {
+    padding: 0 0 25px 0;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem;
+    letter-spacing: 0.06em;
+  }
+}
 
 .about__text {
-  margin-top: 25px;
+  margin: 25px 0 0 0;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+@media (max-width: 768px) {
+  .about__text {
+    margin: 25px 4px 0 3px;
+  }
+}
+@media (max-width: 768px) {
+  .about__text {
+    margin: 0px 15px 22px;
+    text-align: justify;
+  }
 }
 
 .slider {

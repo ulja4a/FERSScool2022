@@ -23,56 +23,40 @@ html {
 }
 
 body {
-    font-size: 1.5rem;
-    font-family: 'Arial', sans-serif;
+    @extend %font-prim;
+    @include font($size: 1.5rem, $height: 2.4rem, $weight: normal);
 }
 h1 {
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
+    @extend %font-add;
+    @include font($height: 3.5rem, $size: 3.2rem);
     letter-spacing: 0.06em;
     color: $color-primari;
     margin: 0;
 }
 .h1-lite {
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
+    @extend %font-add;
+    @include font($height: 3.5rem, $size: 3.2rem);
     letter-spacing: 0.06em;
     color: $color-heading-dark;
 }
 h2 {
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 130%;
+    @extend %font-add;
+    @include font($height: 5.7rem, $size: 4.4rem);
+    @include media-mobile {
+        @include font($height: 3.2rem, $size: 2.5rem);
+        letter-spacing: 0.06em;
+    }
 }
 h3 {
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 130%;
+    @extend %font-add;
+    @include font($height: 4.5rem, $size: 3.5rem);
     letter-spacing: 0.06em;
 }
 h4 {
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
+    @extend %font-add;
+    @include font($height: 2.3rem, $size: 2.0rem);
 }
 h5 {
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 110%;
-    letter-spacing: 0.06em;
+    @extend %font-add;
+    @include font($height: 1.7rem, $size: 1.5rem);
 }

@@ -1,6 +1,15 @@
 .wrapper {
     max-width: $content-width;
     margin: auto;
+    @include media-tablet {
+        max-width: $tablet-width;
+    }
+    @include media-mobile {
+        max-width: $mobile-big-width;
+    }
+    @include media-mobilesmall {
+        max-width: $mobile-small-width;
+    }
     
 }
 .header__wrapper {
@@ -8,17 +17,37 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include media-tablet {
+        padding: 0 30px;
+    }
+    @include media-mobile {
+        padding: 0 20px;
+    }
 }
 .start__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 55px;
+    margin-top: 90px;
+    @include media-tablet {
+        flex-wrap: wrap;
+        margin-top: 60px;
+        padding: 0 100px 0 99px;
+    }
+    @include media-mobile {
+        padding: 0 10px;
+    }
 }
 .about__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
-    padding-bottom: 100px;
+    padding: 80px 0 100px 0;
+    @include media-tablet {
+        flex-wrap: wrap-reverse;
+        padding: 80px 166px 100px 165px;
+    }
+    @include media-mobile {
+        padding: 42px 10px;
+    }
 }
 .pets__wrapper {
     padding: 65px 0 100px 0;
@@ -45,31 +74,36 @@
     font-size: 15px;
     line-height: 160%;
     color: $color-text-lite;
+    padding-left: 0;
+    @include media-tabletmin {
+        display: none;
+    }
 }
 .navigation__link {
     list-style: none;
     margin-left: 35px;
     cursor: pointer;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
+    letter-spacing: normal;
 }
 .navigation__link-lite {
     list-style: none;
     margin-left: 35px;
     cursor: pointer;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
 }
 .navigation__link:first-child {
-    padding-left: 0;
+    margin-left: 0;
 }
 .navigation__link:hover {
     color: $color-link-hover-lite;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
 }
 .navigation__link-lite:hover {
     color: $color-link-hover-dark;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
 }
