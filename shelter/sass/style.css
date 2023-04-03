@@ -137,7 +137,7 @@ h5 {
   width: 100%;
 }
 
-.hamburger__linepets, .hamburger::after, .hamburger:before {
+.hamburger__linepets, .pets_hamburger::after, .pets_hamburger:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -161,12 +161,28 @@ h5 {
 .hamburger:before {
   top: 0;
   left: 0;
-  top: 0;
-  left: 0;
 }
 .hamburger::after {
   bottom: 0;
   left: 0;
+}
+
+.pets_hamburger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+}
+@media (max-width: 767px) {
+  .pets_hamburger {
+    display: block;
+  }
+}
+.pets_hamburger:before {
+  top: 0;
+  left: 0;
+}
+.pets_hamburger::after {
   bottom: 0;
   left: 0;
 }
