@@ -283,8 +283,20 @@ h5 {
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  margin: 40px 40px 0;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .footer__wrapper {
+    margin: 15px 30px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 414px) {
+  .footer__wrapper {
+    margin: 0 10px 0;
+  }
 }
 
 .navigation {
@@ -362,25 +374,64 @@ footer {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 3.5rem;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
+  margin: 0;
+  padding: 16px 0;
+}
+@media (max-width: 414px) {
+  .footer__title {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem;
+    letter-spacing: 0.06em;
+    padding: 0;
+  }
 }
 
 .footer__contacts {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 23.2%;
+}
+@media (max-width: 768px) {
+  .footer__contacts {
+    width: 40%;
+    padding: 0 60px 0 34px;
+  }
+}
+@media (max-width: 414px) {
+  .footer__contacts {
+    width: 100%;
+    padding: 32px 11px 32px;
+    text-align: center;
+  }
 }
 
 .footer__locations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   width: 25.17%;
+}
+@media (max-width: 768px) {
+  .footer__locations {
+    width: 45.5%;
+  }
+}
+@media (max-width: 414px) {
+  .footer__locations {
+    width: 100%;
+    padding: 0 11px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 414px) {
+  .footer__pictur {
+    width: 260px;
+    height: 269px;
+  }
 }
 
 .icon-place {
@@ -440,10 +491,15 @@ footer {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #F1CDB3;
+}
+@media (max-width: 414px) {
+  .link_footer {
+    margin: 0 auto;
+  }
 }
 
 .link_footer:hover {
@@ -533,8 +589,10 @@ footer {
   }
 }
 
-.donation__image {
-  width: 100%;
+@media (max-width: 414px) {
+  .donation__image {
+    width: 100%;
+  }
 }
 
 .donation__title {
@@ -547,7 +605,7 @@ footer {
   margin: 0;
   padding-right: 82px;
 }
-@media (max-width: 768px) {
+@media (max-width: 414px) {
   .donation__title {
     font-size: 2.5rem;
     font-style: normal;
@@ -571,13 +629,13 @@ footer {
 @media (max-width: 768px) {
   .donation__subtitle {
     margin: 20px 0;
-    letter-spacing: normal;
   }
 }
 @media (max-width: 414px) {
   .donation__subtitle {
     margin: 0;
     padding: 22px 14px 22px 13px;
+    letter-spacing: normal;
   }
 }
 
@@ -1046,12 +1104,6 @@ img.about__image {
   height: 60px;
   margin: auto;
 }
-@media (max-width: 414px) {
-  .icon-square_food {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 @media (max-width: 768px) {
   .help-list {
@@ -1094,24 +1146,12 @@ img.about__image {
   height: 60px;
   margin: auto;
 }
-@media (max-width: 414px) {
-  .icon-square_transportation {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 .icon-square_toys {
   background-image: url(../assets/svg/icon-toys.svg);
   width: 60px;
   height: 60px;
   margin: auto;
-}
-@media (max-width: 414px) {
-  .icon-square_toys {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .icon-square_bowls {
@@ -1120,24 +1160,12 @@ img.about__image {
   height: 60px;
   margin: auto;
 }
-@media (max-width: 414px) {
-  .icon-square_bowls {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 .icon-square_shampoos {
   background-image: url(../assets/svg/icon-shampoos.svg);
   width: 60px;
   height: 60px;
   margin: auto;
-}
-@media (max-width: 414px) {
-  .icon-square_shampoos {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .icon-square_vitamins {
@@ -1146,24 +1174,12 @@ img.about__image {
   height: 60px;
   margin: auto;
 }
-@media (max-width: 414px) {
-  .icon-square_vitamins {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 .icon-square_medicines {
   background-image: url(../assets/svg/icon-medicines.svg);
   width: 60px;
   height: 60px;
   margin: auto;
-}
-@media (max-width: 414px) {
-  .icon-square_medicines {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .icon-square_collars {
@@ -1172,24 +1188,12 @@ img.about__image {
   height: 60px;
   margin: auto;
 }
-@media (max-width: 414px) {
-  .icon-square_collars {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 .icon-square_sleeping {
   background-image: url(../assets/svg/icon-sleeping-area.svg);
   width: 60px;
   height: 60px;
   margin: auto;
-}
-@media (max-width: 414px) {
-  .icon-square_sleeping {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -41,10 +41,6 @@
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .help-list {
     @include media-tablet {
@@ -77,78 +73,46 @@
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_toys {
     background-image: url(../assets/svg/icon-toys.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_bowls {
     background-image: url(../assets/svg/icon-bowls-and-cups.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_shampoos {
     background-image: url(../assets/svg/icon-shampoos.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_vitamins {
     background-image: url(../assets/svg/icon-vitamins.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_medicines {
     background-image: url(../assets/svg/icon-medicines.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_collars {
     background-image: url(../assets/svg/icon-collars-leashes.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }
 .icon-square_sleeping {
     background-image: url(../assets/svg/icon-sleeping-area.svg);
     width: 60px;
     height: 60px;
     margin: auto;
-    @include media-mobile {
-        width: 50px;
-        height: 50px;
-    }
 }

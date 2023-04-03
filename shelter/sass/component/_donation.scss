@@ -24,7 +24,9 @@
     }
 }
 .donation__image {
-    width: 100%;
+    @include media-mobile {
+        width: 100%;
+    } 
 }
 .donation__title {
     @include font($height: 4.5rem, $size: 3.5rem);
@@ -32,7 +34,7 @@
     color: #545454;
     margin: 0;
     padding-right: 82px;
-    @include media-tablet {
+    @include media-mobile {
         @include font($height: 3.2rem, $size: 2.5rem);
         text-align: center;
         padding-right: 0;
@@ -48,12 +50,12 @@
     color: #545454;
     margin: 20px 0;
     @include media-tablet {
-        margin: 20px 0;
-        letter-spacing:  normal;
+        margin: 20px 0; 
     }
     @include media-mobile {
         margin: 0;
         padding: 22px 14px 22px 13px;
+        letter-spacing:  normal;
     }
 }
 .donation__text {
