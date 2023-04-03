@@ -6,7 +6,12 @@
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
-    color: $color-heading-dark
+    color: $color-heading-dark;
+    @include media-mobile {
+        margin: 42px 50px;
+        @include font($height: 3.2rem, $size: 2.5rem);
+        letter-spacing: normal;
+    }
 }
 .help__text {
     margin: 0;
@@ -16,15 +21,40 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px 120px;
-    margin-bottom: 100px;
-
+    gap: 35px 120px;
+    @include media-tablet {
+        gap: 55px 60px;
+    }
+    @include media-mobile {
+        justify-content: start;
+        margin: 42px 15px;
+        gap: 30px;
+    }
+}
+.help-list:last-child {
+    @include media-mobile {
+        margin-left: 0;
+    }
 }
 .icon-square_food {
     background-image: url(../assets/svg/icon-pet-food.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
+}
+.help-list {
+    @include media-tablet {
+        width: 170px;
+        height: 113px;
+    }
+    @include media-mobile {
+        width: 130px;
+        height: 87px;
+    }
 }
     
 .help-list__icon {
@@ -38,52 +68,87 @@
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #545454;
+    @include media-mobile {
+        @include font($height: 1.65rem, $size: 1.5rem);
+    }
 }
 .icon-square_transportation {
     background-image: url(../assets/svg/icon-transportation.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_toys {
     background-image: url(../assets/svg/icon-toys.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_bowls {
     background-image: url(../assets/svg/icon-bowls-and-cups.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_shampoos {
     background-image: url(../assets/svg/icon-shampoos.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_vitamins {
     background-image: url(../assets/svg/icon-vitamins.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_medicines {
     background-image: url(../assets/svg/icon-medicines.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_collars {
     background-image: url(../assets/svg/icon-collars-leashes.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }
 .icon-square_sleeping {
     background-image: url(../assets/svg/icon-sleeping-area.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+    @include media-mobile {
+        width: 50px;
+        height: 50px;
+    }
 }

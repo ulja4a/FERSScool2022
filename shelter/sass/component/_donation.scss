@@ -4,7 +4,9 @@
 
 .donation__picture {
     display: flex;
-    height: 100%;
+    width: 505px;
+    height: 261px;
+    padding: 11px 30px 10px 0;
 }
 .donation__title {
     font-family: 'Georgia';
@@ -28,8 +30,11 @@
     margin: 20px 0;
 }
 .donation__text {
-    font-size: 12px;
-    line-height: 18px;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     color: #B2B2B2;
 }
 .link-button {

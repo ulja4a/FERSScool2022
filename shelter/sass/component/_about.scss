@@ -38,7 +38,7 @@ img.about__image {
     @include media-tablet {
         margin: 25px 4px 0 3px;
     }
-    @include media-tablet {
+    @include media-mobile {
         margin: 0px 15px 22px;
         text-align: justify;
     }
