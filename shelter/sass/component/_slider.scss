@@ -35,6 +35,9 @@
         margin: 0;
     }
 }
+.pets_card-pet {
+    margin: 0;
+}
 .none {
     @include media-tablet {
         display: none;

@@ -137,6 +137,16 @@ h5 {
   width: 100%;
 }
 
+.hamburger__linepets, .hamburger::after, .hamburger:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #000000;
+  background: #000000;
+  height: 0px;
+  width: 100%;
+}
+
 .hamburger {
   display: none;
   position: relative;
@@ -151,13 +161,21 @@ h5 {
 .hamburger:before {
   top: 0;
   left: 0;
+  top: 0;
+  left: 0;
 }
 .hamburger::after {
+  bottom: 0;
+  left: 0;
   bottom: 0;
   left: 0;
 }
 
 .hamburger__line {
+  top: calc(50% - 1px);
+}
+
+.hamburger__linepets {
   top: calc(50% - 1px);
 }
 
@@ -244,6 +262,21 @@ h5 {
 }
 @media (max-width: 414px) {
   .pets__wrapper {
+    padding: 42px 10px;
+  }
+}
+
+.pets__wrapperpets {
+  padding: 80px 0 100px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .pets__wrapperpets {
+    padding: 80px 30px 80px;
+  }
+}
+@media (max-width: 414px) {
+  .pets__wrapperpets {
     padding: 42px 10px;
   }
 }
@@ -343,6 +376,10 @@ h5 {
 
 header {
   padding: 30px 0 0 0;
+}
+
+.heder__pets {
+  padding: 30px 0;
 }
 
 .logo-subtitle {
@@ -536,6 +573,17 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .ourpets_pets__title {
+    margin: 0 154px;
+  }
+}
+@media (max-width: 414px) {
+  .ourpets_pets__title {
+    margin: 0;
+  }
+}
+
 .text {
   margin: 0;
 }
@@ -546,13 +594,45 @@ footer {
   margin: 0 auto;
   width: 28.3%;
 }
+@media (max-width: 768px) {
+  .pagination {
+    width: 48%;
+  }
+}
+@media (max-width: 414px) {
+  .pagination {
+    width: 93.75%;
+  }
+}
 
 .card_contener {
-  margin: 45px 0 55px;
+  margin: 60px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px 40px;
+}
+@media (max-width: 768px) {
+  .card_contener {
+    margin: 30px 0 40px;
+  }
+}
+@media (max-width: 414px) {
+  .card_contener {
+    margin: 42px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .none-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .none-mobil {
+    display: none;
+  }
 }
 
 .donation {
@@ -863,6 +943,7 @@ footer {
 .slide-icon {
   display: flex;
   align-items: center;
+  margin: auto;
 }
 
 .pagination_button {
@@ -1001,6 +1082,10 @@ img.about__image {
   .card-pet {
     margin: 0;
   }
+}
+
+.pets_card-pet {
+  margin: 0;
 }
 
 @media (max-width: 768px) {

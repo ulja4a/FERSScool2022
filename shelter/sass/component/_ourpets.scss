@@ -1,7 +1,23 @@
 .card_contener {
-    margin: 45px 0 55px;
+    margin: 60px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px 40px;
+    @include media-tablet {
+        margin: 30px 0 40px;
+    }
+    @include media-mobile {
+        margin: 42px 0;
+    }
+}
+.none-tablet {
+    @include media-tablet {
+        display: none;
+    }
+}
+.none-mobil {
+    @include media-mobile {
+        display: none;
+    }
 }

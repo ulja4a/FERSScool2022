@@ -59,6 +59,16 @@
         padding: 42px 10px;
     }
 }
+.pets__wrapperpets {
+    padding: 80px 0 100px 0;
+    text-align: center;
+    @include media-tablet {
+        padding: 80px 30px 80px;
+    }
+    @include media-mobile {
+        padding: 42px 10px;
+    }
+}
 .help__wrapper {
     text-align: center;
     padding: 80px 0 73.4px 0;
