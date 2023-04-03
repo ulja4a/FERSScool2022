@@ -1,36 +1,75 @@
 .donation {
     background: $color-background;
 }
-
+.donation__content {
+    @include media-tablet {
+        padding: 0 62px 0 62px;
+    }
+    @include media-mobile {
+        padding: 42px 10px 0 10px;
+    }
+}
 .donation__picture {
     display: flex;
-    height: 100%;
+    width: 505px;
+    height: 261px;
+    padding: 11px 30px 10px 0;
+    @include media-tablet {
+        padding: 60px 0 0 0;
+    }
+    @include media-mobile {
+        padding: 22px 30px 42px 30px;
+        width: 260px;
+        height: 135.2px;
+    }
+}
+.donation__image {
+    @include media-mobile {
+        width: 100%;
+    } 
 }
 .donation__title {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 130%;
+    @include font($height: 4.5rem, $size: 3.5rem);
     letter-spacing: 0.06em; 
     color: #545454;
     margin: 0;
     padding-right: 82px;
+    @include media-mobile {
+        @include font($height: 3.2rem, $size: 2.5rem);
+        text-align: center;
+        padding-right: 0;
+    }
 }
 .donation__subtitle {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 110%;
     letter-spacing: 0.06em;
     color: #545454;
     margin: 20px 0;
+    @include media-tablet {
+        margin: 20px 0; 
+    }
+    @include media-mobile {
+        margin: 0;
+        padding: 22px 14px 22px 13px;
+        letter-spacing:  normal;
+    }
 }
 .donation__text {
-    font-size: 12px;
-    line-height: 18px;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     color: #B2B2B2;
+    @include media-mobile {
+        text-align: justify;
+        align-items: center;
+        margin: 20px 10px;
+    }
 }
 .link-button {
     text-decoration: none;
@@ -42,10 +81,14 @@
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2.0rem;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #545454;
+    @include media-mobile {
+        font-family: 'Georgia', sans-serif;
+        @include font($height: 1.7rem, $size: 1.5rem);
+    }
 }
 .link-button:hover {
     background: $color-button-hover-colored;
@@ -57,4 +100,15 @@
     width: 30px;
     height: 23px;
     margin-right: 15px;
+}
+.icon-text {
+    @include media-mobile {
+        font-family: 'Georgia', sans-serif;
+        @include font($height: 1.7rem, $size: 1.5rem);
+    }
+}
+.credit-card {
+    @include media-mobile {
+        padding: 0 10px 0 9px;
+    }
 }

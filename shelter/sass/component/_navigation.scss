@@ -2,14 +2,15 @@
     text-decoration: none;
     color: #CDCDCD;
     cursor: pointer;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
+    letter-spacing: normal;
 }
 .header__link-lite {
     text-decoration: none;
     color: #545454;
     cursor: pointer;
-    transition: all .3s ease-out;
+    @extend %transition;
     scroll-behavior: smooth;
 }
 .header__link:hover {
@@ -34,38 +35,51 @@
     text-decoration: none;
 }
 .slider-icon-prev {
-    display: flex;
-    width: 52px;
-    height: 52px;
-    align-items: center;
-    background: url(../assets/img/button_arrow.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
     border: 2px solid #F1CDB3;
-    border-radius: 100px;
+    border-radius: 10rem;
+    font-size: 2.4rem;
     cursor: pointer;
+    @extend %transition;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    @include media-mobile {
+        order: 2;
+        margin: 20px 40px 0;
+    }
 }
 .slider-icon-prev:hover {
-    background: url(../assets/img/button_arrow_colored.png) no-repeat;
-    transition: all .3s ease-out;
+    background-color: #F1CDB3;
+    @extend %transition;
 }
 .slider-icon-next {
     display: flex;
-    width: 52px;
-    height: 52px;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
     align-items: center;
-    background: url(../assets/img/button_arrow.png) no-repeat;
+    background-color: transparent;
     border: 2px solid #F1CDB3;
-    border-radius: 100px;
+    border-radius: 10rem;
+    font-size: 2.4rem;
     cursor: pointer;
-    transform: rotate(180deg);
+    @extend %transition;
+    @include media-mobile {
+        order: 3;
+        margin: 20px 40px 0;
+    }
 }
 .slider-icon-next:hover {
-    background: url(../assets/img/button_arrow_colored.png) no-repeat;
-    transition: all .3s ease-out;
-    transform: rotate(180deg);
+    background-color: #F1CDB3;
+    @extend %transition;
 }
 .slide-icon {
     display: flex;
     align-items: center;
+    margin: auto;
 }
 .pagination_button {
     width: 48px;
