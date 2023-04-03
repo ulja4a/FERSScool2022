@@ -6,7 +6,12 @@
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
-    color: $color-heading-dark
+    color: $color-heading-dark;
+    @include media-mobile {
+        margin: 40px 50px 42px;
+        @include font($height: 3.2rem, $size: 2.5rem);
+        letter-spacing: normal;
+    }
 }
 .help__text {
     margin: 0;
@@ -16,15 +21,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px 120px;
-    margin-bottom: 100px;
-
+    gap: 35px 120px;
+    @include media-tablet {
+        gap: 55px 60px;
+    }
+    @include media-mobile {
+        justify-content: start;
+        margin: 42px 15px;
+        gap: 30px;
+    }
+}
+.help-list:last-child {
+    @include media-mobile {
+        margin-left: 0;
+    }
 }
 .icon-square_food {
     background-image: url(../assets/svg/icon-pet-food.svg);
     width: 60px;
     height: 60px;
     margin: auto;
+}
+.help-list {
+    @include media-tablet {
+        width: 170px;
+        height: 113px;
+    }
+    @include media-mobile {
+        width: 130px;
+        height: 87px;
+    }
 }
     
 .help-list__icon {
@@ -38,6 +64,9 @@
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #545454;
+    @include media-mobile {
+        @include font($height: 1.65rem, $size: 1.5rem);
+    }
 }
 .icon-square_transportation {
     background-image: url(../assets/svg/icon-transportation.svg);

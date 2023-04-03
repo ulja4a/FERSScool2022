@@ -13,23 +13,52 @@ footer {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 3.5rem;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+    margin: 0;
+    padding: 16px 0;
+    @include media-mobile {
+        @include font($height: 3.2rem, $size: 2.5rem);
+        letter-spacing: 0.06em;
+        padding: 0;
+    }
 }
 .footer__contacts {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 23.2%;
+    @include media-tablet {
+        width: 40%;
+        padding: 0 60px 0 34px;
+    }
+    @include media-mobile {
+        width: 100%;
+        padding: 32px 11px 32px;
+        text-align: center;
+    }
 }
 .footer__locations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 25.17%
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
+    //align-items: center;
+    width: 25.17%;
+    @include media-tablet {
+        width: 45.5%;
+    }
+    @include media-mobile {
+        width: 100%;
+        padding: 0 11px 0;
+        text-align: center;
+    }
+}
+.footer__pictur {
+    @include media-mobile {
+        width: 260px;
+        height: 269px;
+    }
 }
 .icon-place {
     text-decoration: none;
@@ -82,10 +111,13 @@ footer {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 2.0rem;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #F1CDB3;
+    @include media-mobile {
+        margin: 0 auto;
+    }
 }
 .link_footer:hover {
     color: $color-button-hover-colored;

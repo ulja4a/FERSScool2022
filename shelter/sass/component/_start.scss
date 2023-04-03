@@ -5,20 +5,46 @@
     background-size: cover;
 }
 .start__content {
-  margin: 163px 42px 243px 0;
+  margin-top: 163px;
+  @include media-tablet {
+    margin: 0;
+    padding: 0 54px 100px 55px;
+  }
+  @include media-mobile {
+    padding: 0;
+    text-align: center;
+  }
 }
 .start__title {
   margin: 0 150px 0 0;
-  font-family: 'Georgia';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 130%;
-  color: $color-heading-lite;
+  width: 67.4%;
+  color: #FFFFFF;
+  @include media-mobile {
+    margin: 0;
+    width: 100%;
+  }
 }
 .start__text {
-  margin: 42px 0;
-  font-size: 15px;
-  line-height: 160%;
-  color: $color-text-lite;
+  margin: 0;
+  padding: 42px 0px;
+  color: #CDCDCD;
+}
+.start__image {
+  margin-left: 42px;
+  @include media-tablet {
+    margin-left: 70px;
+    background-size: contain;
+    width: 569px;
+    height: 593px;
+  }
+  @include media-mobile {
+    margin: 105px 0 0 40px;
+    width: 260px;
+    height: 271px;
+  }
+}
+.start__button {
+  @include media-tablet {
+    text-align: center;
+  }
 }

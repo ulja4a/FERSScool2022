@@ -3,26 +3,61 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 60px 0;
+    @include media-tablet {
+        flex-wrap: nowrap;
+    }
+    @include media-mobile {
+        margin: 42px 15px;
+        flex-wrap: wrap;
+    }
 }
 
 .name-pet {
-    padding-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 10px;
     margin-top: 0;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 2.0rem;
+    line-height: 2.3rem;
     letter-spacing: 0.06em;
     color: #545454;
 }
 .card-pet {
-    
+    margin: 0 45px;
     background: $color-link-hover-lite;
     font-size: 20px;
     line-height: 23px;
     color: $color-heading-dark;
     cursor: pointer;
+    @include media-tablet {
+        margin: 0;
+    }
+}
+.pets_card-pet {
+    margin: 0;
+}
+.none {
+    @include media-tablet {
+        display: none;
+    }
+}
+.first {
+    @include media-tablet {
+        margin: 0 20px 0 0;
+    }
+    @include media-mobile {
+        order: 1;
+    }
+}
+.second {
+    @include media-tablet {
+        margin: 0 0 0 20px;
+    }
+    @include media-mobile {
+        display: none;
+    }
 }
 .card-pet:hover > .card__content  {
     background: $color-heading-lite;
