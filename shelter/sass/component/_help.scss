@@ -8,7 +8,7 @@
     letter-spacing: 0.06em;
     color: $color-heading-dark;
     @include media-mobile {
-        margin: 42px 50px;
+        margin: 40px 50px 42px;
         @include font($height: 3.2rem, $size: 2.5rem);
         letter-spacing: normal;
     }
