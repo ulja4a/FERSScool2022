@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import "normalize.css/normalize.css";
 .slider-icon-next:hover, .slider-icon-next, .slider-icon-prev:hover, .slider-icon-prev, .header__link-lite, .header__link, .navigation__link-lite:hover, .navigation__link:hover, .navigation__link-lite, .navigation__link {
   transition: all 0.3s ease-out;
 }
