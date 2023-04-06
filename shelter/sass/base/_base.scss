@@ -25,6 +25,7 @@ html {
 body {
     @extend %font-prim;
     @include font($size: 1.5rem, $height: 2.4rem, $weight: normal);
+    margin: 0 auto;
 }
 h1 {
     @extend %font-add;
