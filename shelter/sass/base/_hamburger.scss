@@ -36,7 +36,28 @@
         left: 0;
     }
 }
-.pets_hamburger {
+.hamburger_close {
+    display: none;
+    //display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    @include media-tabletmin {
+        display: block;
+        transform: rotate(90deg);
+    }
+    &:before {
+        @extend %hamburger__line;
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        @extend %hamburger__line;
+        bottom: 0;
+        left: 0;
+    }
+}
+.hamburger_pets {
     display: none;
     //display: inline-block;
     position: relative;
