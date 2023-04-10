@@ -27,6 +27,12 @@ body {
     @include font($size: 1.5rem, $height: 2.4rem, $weight: normal);
     margin: 0 auto;
 }
+.stop {
+    overflow: scroll;
+}
+.noscroll {
+    overflow: hidden;
+}
 h1 {
     @extend %font-add;
     @include font($height: 3.5rem, $size: 3.2rem);
