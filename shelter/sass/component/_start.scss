@@ -37,6 +37,11 @@
     width: 569px;
     height: 593px;
   }
+  @include media-tabletmin {
+    margin: 105px 0 0 40px;
+    width: 260px;
+    height: 271px;
+  }
   @include media-mobile {
     margin: 105px 0 0 40px;
     width: 260px;
