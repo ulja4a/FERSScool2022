@@ -1,0 +1,30 @@
+.body {
+  margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #f8eeee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.grid {
+  background: gray;
+	display: grid;
+	grid-template-columns: repeat(10, 40px);
+  margin-bottom: 30px;
+}
+.cell {
+  height: 40px;
+  font-size: 24px;
+  border: 2px solid #ccc9c9;
+}
+.title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 60px;
+  text-align: center;
+  color: #303075;
+}
+.cell:hover {
+  background-color: #b3b0b0;
+}
