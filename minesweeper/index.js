@@ -41,7 +41,37 @@ function createGrid() {
     }
     grid.appendChild(cell);
     cells.push(cell);
-}
-}
+  }
+    // Добавляем числа по количеству бомб
+    for (let i = 0; i < size * size; i++) {
+      let number = 0;
+      const column = i % size;
+      const row = Math.floor(i / size);
+      if (cells[i].classList.contains('valid')) {
+      for (let x = -1; x <= 1; x++) {
+        for (let y = -1; y <= 1; y++) {
+          const currentColumn = column + x;
+          const currentRow = row + y;
+          if (
+            currentColumn >= 0 &&
+            currentColumn < size &&
+            currentRow >= 0 &&
+            currentRow < size &&
+            !(x === 0 && y === 0) 
+          ) {
+            const currentIndex = currentRow * size + currentColumn;
+            if (cells[currentIndex] && cells[currentIndex].classList.contains('bomb')) {
+              number++;
+            }
+            
+          }
+        }
+      }
+      cells[i].setAttribute('data', number);
+    }
+    
 
+}
+  
+}
 createGrid();
