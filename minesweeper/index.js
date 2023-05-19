@@ -41,6 +41,12 @@ function createGrid() {
     }
     grid.appendChild(cell);
     cells.push(cell);
+
+    //Добавляем обработчик клика по клетке
+    cell.addEventListener('click', function(e) {
+      click(cell)
+    })
+
   }
     // Добавляем числа по количеству бомб
     for (let i = 0; i < size * size; i++) {
@@ -75,3 +81,26 @@ function createGrid() {
   
 }
 createGrid();
+
+//Собітия при клике по клетке
+function click(cell) {
+  if (cell.classList.contains('bomb')) {
+    console.log('Game over');
+  } else {
+    let number = cell.getAttribute('data');
+    if (number !=0) {
+      cell.classList.add('checked');
+      if (number == 1) cell.classList.add('one');
+      if (number == 2) cell.classList.add('two');
+      if (number == 3) cell.classList.add('three');
+      if (number == 4) cell.classList.add('four');
+      if (number == 5) cell.classList.add('five');
+      if (number == 6) cell.classList.add('six');
+      if (number == 7) cell.classList.add('seven');
+      if (number == 8) cell.classList.add('eight');
+      cell.innerHTML = number;
+      return
+    }
+    cell.classList.add('checked');
+  }
+}
