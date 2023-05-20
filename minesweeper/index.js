@@ -17,7 +17,7 @@ const grid = document.createElement('div');
 let size = 10;
 let bombAmount = 10;
 let cells = [];
-let gameOver = false;
+let end = false;
 
 
 //Создание поля
@@ -82,11 +82,10 @@ createGrid();
 //Собітия при клике по клетке
 function click(cell) {
   const currentIndex = cells.indexOf(cell);
-  console.log(currentIndex);
-  if (gameOver) return;
+  if (end) return;
   if (cell.classList.contains('checked') || cell.classList.contains('flag')) return;
   if (cell.classList.contains('bomb')) {
-    console.log('Game over');
+    gameOver(cell);
   } else {
     let number = cell.getAttribute('data');
     if (number !=0) {
@@ -137,4 +136,16 @@ function checkCell(cell, currentIndex) {
       }
     }
   }, 10);
+}
+
+//Функция конца игры
+function gameOver(cell) {
+  console.log('Game over!')
+  end = true;
+// Показать где были бомбы
+  cells.forEach(cell => {
+    if (cell.classList.contains('bomb')) {
+      cell.innerHTML = '💣';
+    }
+  })
 }
