@@ -32,9 +32,50 @@
   width: 40px;
   height: 40px;
   border: 2px solid #b0f0b0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
   box-sizing: border-box;
 }
 
 .bomb {
   background: yellow;
+}
+
+.checked {
+  background: #85c994;
+  box-sizing: border-box;
+}
+
+.one {
+  color: brown;
+}
+
+.two {
+  color: black;
+}
+
+.three {
+  color: #2220b4;
+}
+
+.four {
+  color: beige;
+}
+
+.five {
+  color: #750c3d;
+}
+
+.six {
+  color: #07534d;
+}
+
+.seven {
+  color: #3b4406;
+}
+
+.eight {
+  color: #dd0a0a;
 }

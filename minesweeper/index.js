@@ -17,18 +17,15 @@ const grid = document.createElement('div');
 let size = 10;
 let bombAmount = 10;
 let cells = [];
+let gameOver = false;
 
 
 //Создание поля
 function createGrid() {
   const bombs = Array(bombAmount).fill('bomb'); // Создаем массив из бомб со значением bomb
-  console.log(bombs);
   const emptySquares = Array((size*size) - bombAmount).fill('valid'); //Создаем массив оставшихся валидніх пустіх клеток
-  console.log(emptySquares);
   const board = emptySquares.concat(bombs); //Объединяем массивы в один
-  console.log(board);
   const randomBoard = board.sort(() => Math.random()-0.5); // Рандомно распределяем бомбы
-  console.log(randomBoard);
 
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement('div');
@@ -84,6 +81,10 @@ createGrid();
 
 //Собітия при клике по клетке
 function click(cell) {
+  const currentIndex = cells.indexOf(cell);
+  console.log(currentIndex);
+  if (gameOver) return;
+  if (cell.classList.contains('checked') || cell.classList.contains('flag')) return;
   if (cell.classList.contains('bomb')) {
     console.log('Game over');
   } else {
@@ -101,6 +102,39 @@ function click(cell) {
       cell.innerHTML = number;
       return
     }
-    cell.classList.add('checked');
-  }
+    
+    checkCell(cell, currentIndex);
+    
+}
+cell.classList.add('checked');
+}
+
+// Открытие пустых клеток до чисел при нажатии на свободную клетку
+function checkCell(cell, currentIndex) {
+  setTimeout(() =>{
+    const column = currentIndex % size;
+    const row = Math.floor(currentIndex / size);
+    for (let x = -1; x <= 1; x++) {
+      for (let y = -1; y <= 1; y++) {
+        const currentColumn = column + x;
+        const currentRow = row + y;
+          if (
+              currentColumn >= 0 &&
+              currentColumn < size &&
+              currentRow >= 0 &&
+              currentRow < size &&
+              !(x === 0 && y === 0) 
+            ) {
+            const newCurrentIndex = currentRow * size + currentColumn;
+            const currentCell = cells[newCurrentIndex];
+            if (currentCell && !currentCell.classList.contains('checked') && !currentCell.classList.contains('flag')
+            && !(currentCell.classList.contains('one') || currentCell.classList.contains('two') || 
+            currentCell.classList.contains('three') || currentCell.classList.contains('four')
+            || currentCell.classList.contains('five') || currentCell.classList.contains('six') 
+            || currentCell.classList.contains('seven') || currentCell.classList.contains('eight')))
+              click(currentCell);
+            }
+      }
+    }
+  }, 10);
 }
