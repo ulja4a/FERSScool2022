@@ -1,5 +1,6 @@
 const title = document.createElement('h1');
 const wrap = document.createElement('div');
+const result = document.createElement('div');
 
 document.body.classList.add('body');
 title.classList.add('title');
@@ -10,14 +11,17 @@ wrap.classList.add('grid-wrap');
 document.body.appendChild(wrap);
 
 
+
 const grid = document.createElement('div');
   grid.classList.add('grid');
   wrap.appendChild(grid);
+  grid.appendChild(result);
 
 let size = 10;
 let bombAmount = 10;
 let cells = [];
 let end = false;
+let flags = 0;
 
 
 //Создание поля
@@ -42,7 +46,13 @@ function createGrid() {
     //Добавляем обработчик клика по клетке
     cell.addEventListener('click', function(e) {
       click(cell)
-    })
+    });
+
+    //Добовляем клик правой кнопкой міши
+    cell.addEventListener('contextmenu', function(e) {
+      e.preventDefault()
+      addFlag(cell);
+    });
 
   }
     // Добавляем числа по количеству бомб
@@ -78,6 +88,23 @@ function createGrid() {
   
 }
 createGrid();
+
+//Добовляем флаг правой кн мыши
+function addFlag(cell) {
+  if (end) return;
+  if (!cell.classList.contains('checked') && (flags < bombAmount)) {
+    if (!cell.classList.contains('flag')) {
+      cell.classList.add('flag');
+      cell.innerHTML = '🚩';
+      flags++;
+      checkWin();
+    } else {
+          cell.classList.remove('flag');
+          cell.innerHTML = '';
+          flags--;
+    }
+  }
+}
 
 //Собітия при клике по клетке
 function click(cell) {
@@ -140,7 +167,9 @@ function checkCell(cell, currentIndex) {
 
 //Функция конца игры
 function gameOver(cell) {
-  console.log('Game over!')
+  result.innerHTML = 'Boom, boom! Game Over!';
+  result.classList.add('result');
+  console.log('Game over!');
   end = true;
 // Показать где были бомбы
   cells.forEach(cell => {
@@ -148,4 +177,20 @@ function gameOver(cell) {
       cell.innerHTML = '💣';
     }
   })
+}
+
+//Функция проверки на победу
+function checkWin() {
+  let currentCount = 0;
+  for (j =0; j < cells.length; j++) {
+    if (cells[j].classList.contains('flag') && cells[j].classList.contains('bomb')) {
+      currentCount++;
+  }
+    if (currentCount === bombAmount) {
+      result.innerHTML = 'You WIN!';
+      result.classList.add('result');
+      console.log('win win');
+      end = true;
+    }
+}
 }

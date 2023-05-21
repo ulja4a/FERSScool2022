@@ -22,10 +22,8 @@
   display: flex;
   flex-wrap: wrap;
   background-color: #5dbe72;
-  margin-left: 50px;
-  margin-top: 20px;
+  margin: 0 40px;
   border: 10px solid #b0f0b0;
-  margin-bottom: 10px;
 }
 
 .cell {
@@ -37,10 +35,6 @@
   justify-content: center;
   align-content: center;
   box-sizing: border-box;
-}
-
-.bomb {
-  background: yellow;
 }
 
 .checked {
@@ -78,4 +72,16 @@
 
 .eight {
   color: #dd0a0a;
+}
+
+.result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
