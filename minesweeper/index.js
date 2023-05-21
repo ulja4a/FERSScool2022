@@ -1,6 +1,10 @@
 const title = document.createElement('h1');
 const wrap = document.createElement('div');
 const result = document.createElement('div');
+const options = document.createElement('div');
+const flagsBomb = document.createElement('p');
+const steps = document.createElement('p');
+const times = document.createElement('p');
 
 document.body.classList.add('body');
 title.classList.add('title');
@@ -17,6 +21,16 @@ const grid = document.createElement('div');
   wrap.appendChild(grid);
   grid.appendChild(result);
 
+options.classList.add('options');
+title.appendChild(options);
+flagsBomb.classList.add('flag-bomb');
+times.classList.add('times');
+steps.classList.add('steps');
+options.appendChild(flagsBomb);
+options.appendChild(times);
+options.appendChild(steps);
+
+
 let size = 10;
 let bombAmount = 10;
 let cells = [];
@@ -26,6 +40,7 @@ let flags = 0;
 
 //Создание поля
 function createGrid() {
+  const flagsBomb = bombAmount;
   const bombs = Array(bombAmount).fill('bomb'); // Создаем массив из бомб со значением bomb
   const emptySquares = Array((size*size) - bombAmount).fill('valid'); //Создаем массив оставшихся валидніх пустіх клеток
   const board = emptySquares.concat(bombs); //Объединяем массивы в один
@@ -92,16 +107,18 @@ createGrid();
 //Добовляем флаг правой кн мыши
 function addFlag(cell) {
   if (end) return;
-  if (!cell.classList.contains('checked') && (flags < bombAmount)) {
+  if (!cell.classList.contains('checked') && (flags <= bombAmount)) {
     if (!cell.classList.contains('flag')) {
       cell.classList.add('flag');
       cell.innerHTML = '🚩';
       flags++;
+      flagsBomb.innerHTML = '💣: ' + (bombAmount - flags);
       checkWin();
     } else {
           cell.classList.remove('flag');
           cell.innerHTML = '';
           flags--;
+          flagsBomb.innerHTML = '💣: ' + (bombAmount - flags);
     }
   }
 }
