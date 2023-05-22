@@ -1,0 +1,109 @@
+.body {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 60px;
+  text-align: center;
+  color: #303075;
+}
+
+.grid-wrap {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.grid {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #5dbe72;
+  margin: 0 40px;
+  border: 10px solid #b0f0b0;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #b0f0b0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.checked {
+  background: #85c994;
+  box-sizing: border-box;
+}
+
+.one {
+  color: brown;
+}
+
+.two {
+  color: black;
+}
+
+.three {
+  color: #2220b4;
+}
+
+.four {
+  color: beige;
+}
+
+.five {
+  color: #750c3d;
+}
+
+.six {
+  color: #07534d;
+}
+
+.seven {
+  color: #3b4406;
+}
+
+.eight {
+  color: #dd0a0a;
+}
+
+.result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.options {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+  margin: auto;
+}
+
+.start {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+  color: #303075;
+}
+
+.start:hover {
+  color: orange;
+  cursor: pointer;
+}
