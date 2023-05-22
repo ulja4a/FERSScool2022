@@ -3,8 +3,9 @@ const wrap = document.createElement('div');
 const result = document.createElement('div');
 const options = document.createElement('div');
 const flagsBomb = document.createElement('p');
-const steps = document.createElement('p');
-const times = document.createElement('p');
+const stepsElement = document.createElement('p');
+const timerElement = document.createElement('p');
+const startGame = document.createElement('p');
 
 document.body.classList.add('body');
 title.classList.add('title');
@@ -13,6 +14,9 @@ document.body.appendChild(title);
 
 wrap.classList.add('grid-wrap');
 document.body.appendChild(wrap);
+startGame.classList.add('start');
+startGame.textContent = 'New Game';
+document.body.appendChild(startGame);
 
 
 
@@ -24,11 +28,11 @@ const grid = document.createElement('div');
 options.classList.add('options');
 title.appendChild(options);
 flagsBomb.classList.add('flag-bomb');
-times.classList.add('times');
-steps.classList.add('steps');
+timerElement.classList.add('times');
+stepsElement.classList.add('steps');
 options.appendChild(flagsBomb);
-options.appendChild(times);
-options.appendChild(steps);
+options.appendChild(timerElement);
+options.appendChild(stepsElement);
 
 
 let size = 10;
@@ -36,11 +40,24 @@ let bombAmount = 10;
 let cells = [];
 let end = false;
 let flags = 0;
+let steps = 0;
+let gameTime = 0;
+let timerInterval = null;
+flagsBomb.textContent = '💣: ' + bombAmount;
+stepsElement.textContent = 'Steps: 0';
+timerElement.textContent = 'Time: 0';
+
+//Подсчет времени
+function updateTimer() {
+  gameTime++;
+  timerElement.textContent = 'Time: ' + gameTime;
+}
 
 
 //Создание поля
 function createGrid() {
   const flagsBomb = bombAmount;
+  let steps = 0;
   const bombs = Array(bombAmount).fill('bomb'); // Создаем массив из бомб со значением bomb
   const emptySquares = Array((size*size) - bombAmount).fill('valid'); //Создаем массив оставшихся валидніх пустіх клеток
   const board = emptySquares.concat(bombs); //Объединяем массивы в один
@@ -100,7 +117,8 @@ function createGrid() {
     
 
 }
-  
+// Запускаем таймер
+  timerInterval = setInterval(updateTimer, 1000);
 }
 createGrid();
 
@@ -150,6 +168,9 @@ function click(cell) {
     
 }
 cell.classList.add('checked');
+steps++;
+console.log(steps)
+stepsElement.innerHTML = 'Steps: ' + steps;
 }
 
 // Открытие пустых клеток до чисел при нажатии на свободную клетку
@@ -194,6 +215,8 @@ function gameOver(cell) {
       cell.innerHTML = '💣';
     }
   })
+  // Остановить таймер
+  clearInterval(timerInterval);
 }
 
 //Функция проверки на победу
@@ -211,3 +234,7 @@ function checkWin() {
     }
 }
 }
+
+startGame.addEventListener('click', function() {
+  location.reload();
+});

@@ -88,4 +88,22 @@
 
 .options {
   font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+  margin: auto;
+}
+
+.start {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+  color: #303075;
+}
+
+.start:hover {
+  color: orange;
+  cursor: pointer;
 }
